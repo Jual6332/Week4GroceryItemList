@@ -33,8 +33,8 @@ export class HomePage {
 
 	showAddItemPrompt() {
 		const prompt = this.alertCtrl.create({
-			title: 'Login',
-			message = "Enter a name for this ",
+			title: 'Add New Grocery Item',
+			message = "Enter a name for new grocery item: ",
 			inputs: [
 				{
 					name: 'title',
