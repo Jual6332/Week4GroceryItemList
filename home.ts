@@ -19,11 +19,29 @@ export class HomePage {
 	{
 		name:"Bread",
 		quantity:3
+	},
+	{
+		name:"Blueberries",
+		quantity:4
+	},
+	{
+		name:"Chocolate Milk",
+		quantity:1
 	}
 	];
 
 	constructor(public navCtrl: NavController, public toastCtrl: ToastController, public alertCtrl: AlertController){
 
+	}
+
+	removeItem(item,index){
+		console.log("Removing grocery item from grocery items list.");
+		console.log("Removing Item - ",item,index);
+		const toast = this.toastCtrl.create({
+			message: 'Removing Item - ' + item.name + " ...",
+			duration: 3000
+		});
+		toast.present();
 	}
 
 	addItem(){
