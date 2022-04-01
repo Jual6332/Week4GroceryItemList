@@ -42,6 +42,8 @@ export class HomePage {
 			duration: 3000
 		});
 		toast.present();
+
+		this.items.splice(index,1);
 	}
 
 	addItem(){
