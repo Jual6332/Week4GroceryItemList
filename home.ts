@@ -37,8 +37,15 @@ export class HomePage {
 			message = "Enter a name for new grocery item: ",
 			inputs: [
 				{
-					name: 'title',
-					placeholder: 'Title'
+					name: 'name',
+					placeholder: 'Name'
+				},
+			],
+
+			inputs: [
+				{
+					name: 'quantity',
+					placeholder: 'Quantity'
 				},
 			],
 
@@ -51,8 +58,9 @@ export class HomePage {
 				},
 				{
 					text: 'Save',
-					handler: data => {
+					handler: item => {
 						console.log('Saved clicked.');
+						this.items.push(item);
 					}
 				}
 			]
