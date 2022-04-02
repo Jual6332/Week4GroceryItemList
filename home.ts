@@ -57,6 +57,42 @@ export class HomePage {
 		this.showEditItemPrompt(item,index);
 	}
 
+	showEditItemPrompt(item,index){
+		const prompt = this.alertCtrl.create({
+			title: 'Edit Item',
+			message: "Please edit item..."
+			inputs: [
+				{
+					name: 'name',
+					placeholder: 'Name',
+					value: item.name
+				},
+				{
+					name: 'quantity',
+					placeholder: 'Quantity',
+					value: item.quantity
+				},
+			],
+			buttons: [
+				{
+					text: 'Cancel',
+					handler: data => {
+						console.log('Cancel clicked.');
+					}
+				},
+				{
+					text: 'Save',
+					handler: item => {
+						console.log('Saved clicked.',item);
+						this.items[index] = item;
+					}
+				}
+			]
+
+		});
+		prompt.present();
+	}
+
 	addItem(){
 		console.log("Adding new grocery item to list of grocery items.");
 		this.showAddItemPrompt();
