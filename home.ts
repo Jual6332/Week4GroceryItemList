@@ -46,6 +46,17 @@ export class HomePage {
 		this.items.splice(index,1);
 	}
 
+	editItem(item,index){
+		console.log("Editing grocery item currently in grocery items list.");
+		console.log("Editing item - ",item,index);
+		const toast = this.toastCtrl.create({
+			message: 'Editing Item - ' + index + " ...",
+			duration: 3000
+		});
+		toast.present();
+		this.showEditItemPrompt(item,index);
+	}
+
 	addItem(){
 		console.log("Adding new grocery item to list of grocery items.");
 		this.showAddItemPrompt();
