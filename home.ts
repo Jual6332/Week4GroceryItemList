@@ -46,6 +46,17 @@ export class HomePage {
 		this.items.splice(index,1);
 	}
 
+	shareItem(item, index) {
+		console.log("Sharing Item - ", item, index);
+		const toast = this.toastCtrl.create({
+			message: 'Sharing Item - ' + index + " ...",
+			duration: 3000
+		});
+		toast.present();
+
+		this.dataService.removeItem(index);
+	}
+
 	editItem(item,index){
 		console.log("Editing grocery item currently in grocery items list.");
 		console.log("Editing item - ",item,index);
