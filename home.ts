@@ -54,7 +54,6 @@ export class HomePage {
 		});
 		toast.present();
 
-		this.dataService.removeItem(index);
 	}
 
 	editItem(item,index){
