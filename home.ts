@@ -107,13 +107,10 @@ export class HomePage {
 					name: 'name',
 					placeholder: 'Name'
 				},
-			],
-
-			inputs: [
 				{
 					name: 'quantity',
 					placeholder: 'Quantity'
-				},
+				}
 			],
 
 			buttons: [
