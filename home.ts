@@ -60,7 +60,7 @@ export class HomePage {
 	showEditItemPrompt(item,index){
 		const prompt = this.alertCtrl.create({
 			title: 'Edit Item',
-			message: "Please edit item..."
+			message: "Please edit item...",
 			inputs: [
 				{
 					name: 'name',
@@ -101,7 +101,7 @@ export class HomePage {
 	showAddItemPrompt() {
 		const prompt = this.alertCtrl.create({
 			title: 'Add New Grocery Item',
-			message = "Enter a name for new grocery item: ",
+			message: "Enter a name for new grocery item: ",
 			inputs: [
 				{
 					name: 'name',
