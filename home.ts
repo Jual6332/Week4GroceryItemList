@@ -59,8 +59,10 @@ export class HomePage {
 		let subject = "Shared via Groceries App";
 		this.socialSharing.share(message, subject).then(() => {
 			// Sharing via email is possible
-		}).catch(() => {
+			console.log("Shared successfully!");
+		}).catch((error) => {
 			// Sharing via email is not ppossible
+			console.error("Error while sharing ", error);
 		});
 
 	}
