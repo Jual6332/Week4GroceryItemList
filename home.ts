@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @Component({
 	selector: 'page-home',
